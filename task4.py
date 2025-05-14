@@ -5,9 +5,8 @@ def fibonacci(n, num={}):
         return num[n]
     if n <= 2:
         return 1
-    num[n] = fibonacci(n-1, num) + fibonacci(n-2, num)
-    return num[n]
-
+    return fibonacci(n-1, num) + fibonacci(n-2, num)
+   
 n = int(input("Enter number : "))
 print("Fibonacci number : ", fibonacci(n))    
 
