@@ -60,3 +60,24 @@ number = [9,4,8,10,2,4,8,3,14,4,8]
 n = 12
 ans = find_sum(number, n)
 print(ans)
+
+
+# ------------------------
+
+from itertools import combinations
+
+def find_sum(numbers, pair_sum):
+    result = set()
+
+    for a, b in combinations(numbers, 2):
+        if a + b == pair_sum:
+            pair = tuple(sorted((a, b))) 
+            result.add(pair)
+
+    return list(result)
+
+number = [9, 4, 8, 10, 2, 4, 8, 3, 14, 4, 8]
+n = 12
+ans = find_sum(number, n)
+print(ans)
+
