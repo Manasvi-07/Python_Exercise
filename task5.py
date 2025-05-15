@@ -40,3 +40,23 @@ numbers = [9,4,8,10,2,4,8,3,14,4,8]
 n = 12
 ans = find_sum(numbers, n)
 print(ans)
+
+# ----------------------
+
+def find_sum(numbers, pair_sum):
+    ans =[]
+    result = set()
+
+    for num in numbers:
+        cur_sum = pair_sum - num
+        if cur_sum in result:
+            pair = sorted([num, cur_sum])
+            if pair not in ans:
+                ans.append(pair)
+        result.add(num)
+    return ans
+
+number = [9,4,8,10,2,4,8,3,14,4,8]
+n = 12
+ans = find_sum(number, n)
+print(ans)
