@@ -10,12 +10,12 @@ print(numbers)
 
 # --------------------------------
 
-for i in range(n-1):
-    min_Index = i 
-    for j in range(i+1, n):
-        if numbers[j] < numbers[min_Index]:
-            min_Index = j 
-        numbers[i],numbers[min_Index]= numbers[min_Index], numbers[i]
+for i in range(n - 1):
+    minIndex = i 
+    for j in range(i + 1, n):
+        if numbers[j] < numbers[minIndex]:
+            minIndex = j 
+    numbers[i], numbers[minIndex] = numbers[minIndex], numbers[i]
 
 print(numbers)
 
